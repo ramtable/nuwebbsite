@@ -1,0 +1,497 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{475B81D3-5A14-4508-90A2-2C607EBF26A7}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>webbsite</RootNamespace>
+    <AssemblyName>webbsite</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44331</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>webbsite.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>webbsite.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ccass\bigchanges.asp" />
+    <Content Include="ccass\bigchangesissue.asp" />
+    <Content Include="ccass\bigchangespart.asp" />
+    <Content Include="ccass\brokhist.asp" />
+    <Content Include="ccass\CCASSnotes.asp" />
+    <Content Include="ccass\cconc.asp" />
+    <Content Include="ccass\cconchist.asp" />
+    <Content Include="ccass\chistory.asp" />
+    <Content Include="ccass\chldchg.asp" />
+    <Content Include="ccass\cholder.asp" />
+    <Content Include="ccass\choldings.asp" />
+    <Content Include="ccass\cparticipants.asp" />
+    <Content Include="ccass\ctothist.asp" />
+    <Content Include="ccass\custhist.asp" />
+    <Content Include="ccass\ipstakes.asp" />
+    <Content Include="ccass\ncipchg.asp" />
+    <Content Include="ccass\nciphist.asp" />
+    <Content Include="ccass\portchg.asp" />
+    <Content Include="ccass\reghist.asp" />
+    <Content Include="contact\default.asp" />
+    <Content Include="dbeditor\admholdings.asp" />
+    <Content Include="dbeditor\admlogs.asp" />
+    <Content Include="dbeditor\admorgs.asp" />
+    <Content Include="dbeditor\admpeople.asp" />
+    <Content Include="dbeditor\admprofiles.asp" />
+    <Content Include="dbeditor\admrels.asp" />
+    <Content Include="dbeditor\advisership.asp" />
+    <Content Include="dbeditor\alias.asp" />
+    <Content Include="dbeditor\classifications.asp" />
+    <Content Include="dbeditor\cofooter.asp" />
+    <Content Include="dbeditor\comattend.asp" />
+    <Content Include="dbeditor\combineorgs.asp" />
+    <Content Include="dbeditor\combineppl.asp" />
+    <Content Include="dbeditor\comeets.asp" />
+    <Content Include="dbeditor\compos.asp" />
+    <Content Include="dbeditor\coms.asp" />
+    <Content Include="dbeditor\coms.js" />
+    <Content Include="dbeditor\cotop.inc" />
+    <Content Include="dbeditor\CSV.asp" />
+    <Content Include="dbeditor\default.asp" />
+    <Content Include="dbeditor\docedit.asp" />
+    <Content Include="dbeditor\doclinks.asp" />
+    <Content Include="dbeditor\docmon.asp" />
+    <Content Include="dbeditor\downloads.asp" />
+    <Content Include="dbeditor\events.asp" />
+    <Content Include="dbeditor\freg.asp" />
+    <Content Include="dbeditor\holders.inc" />
+    <Content Include="dbeditor\holding.asp" />
+    <Content Include="dbeditor\holdinghist.asp" />
+    <Content Include="dbeditor\holdings.inc" />
+    <Content Include="dbeditor\human.asp" />
+    <Content Include="dbeditor\issue.asp" />
+    <Content Include="dbeditor\issued.asp" />
+    <Content Include="dbeditor\listing.asp" />
+    <Content Include="dbeditor\officer.asp" />
+    <Content Include="dbeditor\olddom.asp" />
+    <Content Include="dbeditor\oldlots.asp" />
+    <Content Include="dbeditor\oldnames.asp" />
+    <Content Include="dbeditor\org.asp" />
+    <Content Include="dbeditor\orgdata.asp" />
+    <Content Include="dbeditor\ownerdets.asp" />
+    <Content Include="dbeditor\pay.asp" />
+    <Content Include="dbeditor\payleague.asp" />
+    <Content Include="dbeditor\payreview.asp" />
+    <Content Include="dbeditor\paysubmitted.asp" />
+    <Content Include="dbeditor\prepMaster.inc" />
+    <Content Include="dbeditor\relatives.asp" />
+    <Content Include="dbeditor\reorg.asp" />
+    <Content Include="dbeditor\searchadvisers.asp" />
+    <Content Include="dbeditor\searchorgs.asp" />
+    <Content Include="dbeditor\searchpeople.asp" />
+    <Content Include="dbeditor\shortnames.asp" />
+    <Content Include="dbeditor\snaplog.asp" />
+    <Content Include="dbeditor\stories.asp" />
+    <Content Include="dbeditor\story.asp" />
+    <Content Include="dbeditor\useradmin.asp" />
+    <Content Include="dbeditor\web.asp" />
+    <Content Include="dbpub\advbyrole.asp" />
+    <Content Include="dbpub\advisers.asp" />
+    <Content Include="dbpub\adviserships.asp" />
+    <Content Include="dbpub\advltsnap.asp" />
+    <Content Include="dbpub\alltotrets.asp" />
+    <Content Include="dbpub\articles.asp" />
+    <Content Include="dbpub\articlesyear.asp" />
+    <Content Include="dbpub\artlinks.asp" />
+    <Content Include="dbpub\auditorchanges.asp" />
+    <Content Include="dbpub\auditornotes.asp" />
+    <Content Include="dbpub\boardcomp.asp" />
+    <Content Include="dbpub\bornday.asp" />
+    <Content Include="dbpub\bornyear.asp" />
+    <Content Include="dbpub\buybacks.asp" />
+    <Content Include="dbpub\buybackstime.asp" />
+    <Content Include="dbpub\buybacksum.asp" />
+    <Content Include="dbpub\campaigns.asp" />
+    <Content Include="dbpub\cat.asp" />
+    <Content Include="dbpub\cgrate.asp" />
+    <Content Include="dbpub\chart.asp" />
+    <Content Include="dbpub\code.asp" />
+    <Content Include="dbpub\complain.asp" />
+    <Content Include="dbpub\cosperdomHK.asp" />
+    <Content Include="dbpub\CSV.asp" />
+    <Content Include="dbpub\ctr.asp" />
+    <Content Include="dbpub\default.asp" />
+    <Content Include="dbpub\delisted.asp" />
+    <Content Include="dbpub\DirsHKAgeDistn.asp" />
+    <Content Include="dbpub\DirsHKDistnPeople.asp" />
+    <Content Include="dbpub\dirsHKPerPerson.asp" />
+    <Content Include="dbpub\DirsPerListcoHKdstn.asp" />
+    <Content Include="dbpub\disFcal.asp" />
+    <Content Include="dbpub\disHKcaltype.asp" />
+    <Content Include="dbpub\docs.asp" />
+    <Content Include="dbpub\domicile.asp" />
+    <Content Include="dbpub\domicilechange.asp" />
+    <Content Include="dbpub\domicilecos.asp" />
+    <Content Include="dbpub\domregHK.asp" />
+    <Content Include="dbpub\donations.asp" />
+    <Content Include="dbpub\dygraph-combined.js" />
+    <Content Include="dbpub\EFBS.asp" />
+    <Content Include="dbpub\ESSraw.asp" />
+    <Content Include="dbpub\esstop.asp" />
+    <Content Include="dbpub\eventdets.asp" />
+    <Content Include="dbpub\events.asp" />
+    <Content Include="dbpub\excanvas.compiled.js" />
+    <Content Include="dbpub\excanvas.js" />
+    <Content Include="dbpub\FAQW.asp" />
+    <Content Include="dbpub\FAQWWW.asp" />
+    <Content Include="dbpub\FDirsPerListcoHKdstn.asp" />
+    <Content Include="dbpub\freecodesunder1000.asp" />
+    <Content Include="dbpub\functions1.asp" />
+    <Content Include="dbpub\gemgrads.asp" />
+    <Content Include="dbpub\govac.asp" />
+    <Content Include="dbpub\govacCSV.asp" />
+    <Content Include="dbpub\govacmap%28too slow%29.asp" />
+    <Content Include="dbpub\govacNotes.asp" />
+    <Content Include="dbpub\govacsearch.asp" />
+    <Content Include="dbpub\govest.asp" />
+    <Content Include="dbpub\headlinesws.asp" />
+    <Content Include="dbpub\HKBRcheck.asp" />
+    <Content Include="dbpub\HKdirsTypeSex.asp" />
+    <Content Include="dbpub\HKDtender.asp" />
+    <Content Include="dbpub\HKflighthist.asp" />
+    <Content Include="dbpub\HKflights.asp" />
+    <Content Include="dbpub\HKflightscan.asp" />
+    <Content Include="dbpub\HKIDindex.asp" />
+    <Content Include="dbpub\HKIDindex120215.asp" />
+    <Content Include="dbpub\hklistconowebs.asp" />
+    <Content Include="dbpub\hklistcowebs.asp" />
+    <Content Include="dbpub\HKMAchart.asp" />
+    <Content Include="dbpub\hkpax.asp" />
+    <Content Include="dbpub\hkpaxGoogle.asp" />
+    <Content Include="dbpub\HKsolemps.asp" />
+    <Content Include="dbpub\HKsolfirms.asp" />
+    <Content Include="dbpub\HKsols.asp" />
+    <Content Include="dbpub\HKsolsadmhk.asp" />
+    <Content Include="dbpub\HKsolsadmos.asp" />
+    <Content Include="dbpub\HKsolsdom.asp" />
+    <Content Include="dbpub\HKsolsmoves.asp" />
+    <Content Include="dbpub\HKstocksByBoardLot.asp" />
+    <Content Include="dbpub\holders.asp" />
+    <Content Include="dbpub\holdings.asp" />
+    <Content Include="dbpub\hpu.asp" />
+    <Content Include="dbpub\hpup.asp" />
+    <Content Include="dbpub\hpw.asp" />
+    <Content Include="dbpub\idcheck.asp" />
+    <Content Include="dbpub\incFcal.asp" />
+    <Content Include="dbpub\incHKannual.asp" />
+    <Content Include="dbpub\incHKcaltype.asp" />
+    <Content Include="dbpub\incHKmonth.asp" />
+    <Content Include="dbpub\incHKsurvive.asp" />
+    <Content Include="dbpub\incUKcaltype.asp" />
+    <Content Include="dbpub\indexhk.asp" />
+    <Content Include="dbpub\INEDHKDistnCos.asp" />
+    <Content Include="dbpub\INEDHKDistnPeople.asp" />
+    <Content Include="dbpub\jail.asp" />
+    <Content Include="dbpub\landreg.asp" />
+    <Content Include="dbpub\latestdirsHK.asp" />
+    <Content Include="dbpub\leagueDirsHK.asp" />
+    <Content Include="dbpub\leagueNotesA.asp" />
+    <Content Include="dbpub\leagueNotesD.asp" />
+    <Content Include="dbpub\lirstaff.asp" />
+    <Content Include="dbpub\lirstaffhist.asp" />
+    <Content Include="dbpub\lirteams.asp" />
+    <Content Include="dbpub\listed.asp" />
+    <Content Include="dbpub\listingtrend.asp" />
+    <Content Include="dbpub\lrvaluecats.asp" />
+    <Content Include="dbpub\matches.asp" />
+    <Content Include="dbpub\mcap.asp" />
+    <Content Include="dbpub\mcaphist.asp" />
+    <Content Include="dbpub\mcaphistnotes.asp" />
+    <Content Include="dbpub\namechangeHK.asp" />
+    <Content Include="dbpub\namechangeHKlisted.asp" />
+    <Content Include="dbpub\natarts.asp" />
+    <Content Include="dbpub\natperson.asp" />
+    <Content Include="dbpub\navbar2WithDocsForm.asp" />
+    <Content Include="dbpub\navbars.asp" />
+    <Content Include="dbpub\officers.asp" />
+    <Content Include="dbpub\offpay.asp" />
+    <Content Include="dbpub\offsum.asp" />
+    <Content Include="dbpub\oldestHKcos.asp" />
+    <Content Include="dbpub\orgdata.asp" />
+    <Content Include="dbpub\outstanding.asp" />
+    <Content Include="dbpub\overlap.asp" />
+    <Content Include="dbpub\pay.asp" />
+    <Content Include="dbpub\positions.asp" />
+    <Content Include="dbpub\possum.asp" />
+    <Content Include="dbpub\prhblocks.asp" />
+    <Content Include="dbpub\prhdistricts.asp" />
+    <Content Include="dbpub\prhestates.asp" />
+    <Content Include="dbpub\prhfloors.asp" />
+    <Content Include="dbpub\prhunits.asp" />
+    <Content Include="dbpub\prices.asp" />
+    <Content Include="dbpub\pricesCSV.asp" />
+    <Content Include="dbpub\qt.asp" />
+    <Content Include="dbpub\rating.js" />
+    <Content Include="dbpub\regHKannual.asp" />
+    <Content Include="dbpub\reportspeed.asp" />
+    <Content Include="dbpub\rightsoo.asp" />
+    <Content Include="dbpub\roles.asp" />
+    <Content Include="dbpub\sdicap.asp" />
+    <Content Include="dbpub\sdidir.asp" />
+    <Content Include="dbpub\sdidirco.asp" />
+    <Content Include="dbpub\sdiissue.asp" />
+    <Content Include="dbpub\sdilatest.asp" />
+    <Content Include="dbpub\sdiNotes.asp" />
+    <Content Include="dbpub\searchESS.asp" />
+    <Content Include="dbpub\searchorgs.asp" />
+    <Content Include="dbpub\searchpeople.asp" />
+    <Content Include="dbpub\SFCchanges.asp" />
+    <Content Include="dbpub\SFChistall.asp" />
+    <Content Include="dbpub\SFChistfirm.asp" />
+    <Content Include="dbpub\SFClicensees.asp" />
+    <Content Include="dbpub\SFClicount.asp" />
+    <Content Include="dbpub\sfclicrec.asp" />
+    <Content Include="dbpub\sfcolicrec.asp" />
+    <Content Include="dbpub\short.asp" />
+    <Content Include="dbpub\shortdate.asp" />
+    <Content Include="dbpub\shortnotes.asp" />
+    <Content Include="dbpub\shortsum.asp" />
+    <Content Include="dbpub\shutdown-note.asp" />
+    <Content Include="dbpub\splits.asp" />
+    <Content Include="dbpub\str.asp" />
+    <Content Include="dbpub\subject.asp" />
+    <Content Include="dbpub\TRnotes.asp" />
+    <Content Include="dbpub\tuntraff.asp" />
+    <Content Include="dbpub\vax.asp" />
+    <Content Include="dbpub\vebrandhist.asp" />
+    <Content Include="dbpub\vedet.asp" />
+    <Content Include="dbpub\veengine.asp" />
+    <Content Include="dbpub\veFR.asp" />
+    <Content Include="dbpub\veFRtype.asp" />
+    <Content Include="dbpub\veFRtypehist.asp" />
+    <Content Include="dbpub\vefuel.asp" />
+    <Content Include="dbpub\vefuelhist.asp" />
+    <Content Include="dbpub\veJourneyhist.asp" />
+    <Content Include="dbpub\veJourneys.asp" />
+    <Content Include="dbpub\webbchips.asp" />
+    <Content Include="dbpub\websites.asp" />
+    <Content Include="dbpub\yearend.asp" />
+    <Content Include="dbpub\yearendcos.asp" />
+    <Content Include="mailman\domainchange.asp" />
+    <Content Include="mailman\mailchange.asp" />
+    <Content Include="mailman\searchusers.asp" />
+    <Content Include="mailman\sendletter.asp" />
+    <Content Include="pollman\default.asp" />
+    <Content Include="pollman\editP.asp" />
+    <Content Include="pollman\listA.asp" />
+    <Content Include="pollman\listQ.asp" />
+    <Content Include="pollman\poll.asp" />
+    <Content Include="pollman\pollmaster.asp" />
+    <Content Include="templates\cookiechk.asp" />
+    <Content Include="templates\cotop.asp" />
+    <Content Include="templates\cotopdb.asp" />
+    <Content Include="templates\exporting.js" />
+    <Content Include="templates\footerdb.asp" />
+    <Content Include="templates\footerws.asp" />
+    <Content Include="templates\highstock.js" />
+    <Content Include="templates\main.css" />
+    <Content Include="templates\tailart.asp" />
+    <Content Include="templates\topart.asp" />
+    <Content Include="vote\crosstab.asp" />
+    <Content Include="vote\default.asp" />
+    <Content Include="vote\poll.asp" />
+    <Content Include="vote\pollfunctions.asp" />
+    <Content Include="vote\quickpoll.asp" />
+    <Content Include="vote\result.asp" />
+    <Content Include="Web.config" />
+    <Content Include="webbmail\authentic.asp" />
+    <Content Include="webbmail\changeaddr.asp" />
+    <Content Include="webbmail\domainlist.asp" />
+    <Content Include="webbmail\forgot.asp" />
+    <Content Include="webbmail\join.asp" />
+    <Content Include="webbmail\login.asp" />
+    <Content Include="webbmail\mailpref.asp" />
+    <Content Include="webbmail\mybigchanges.asp" />
+    <Content Include="webbmail\myratings.asp" />
+    <Content Include="webbmail\mysdi.asp" />
+    <Content Include="webbmail\mystocks.asp" />
+    <Content Include="webbmail\mytotrets.asp" />
+    <Content Include="webbmail\prepmsg.asp" />
+    <Content Include="webbmail\rating2.js" />
+    <Content Include="webbmail\ratinghist.asp" />
+    <Content Include="webbmail\reset.asp" />
+    <Content Include="webbmail\username.asp" />
+    <Content Include="webbmail\verify.asp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>8637</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44331/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
