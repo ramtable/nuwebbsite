@@ -1,18 +1,18 @@
-#The new Webbsite - adding improvements here and there
+# The new Webbsite - adding improvements here and there
 
-##Enigma / JSONKit / ScraperKit / Persons
+## Enigma / JSONKit / ScraperKit / Persons
 
 These folders contain backend VB console applications and cron jobs.
 A simple menu has been added to run the VB files, along with a program parameter to support execution via Windows Task Scheduler.
 
-##Scheduler_Files
+## Scheduler_Files
 
 Contains cron job scripts configured for use with Windows Task Scheduler.
 
-##Webbsite
+## Webbsite
 
 This is the ASP.NET folder for the frontend. No changes have been made from the original repository at this time.
 
-##Attribution
+## Attribution
 
 This repo is modified from the original repo from David Webb: https://webb-site.com/articles/repository.asp
