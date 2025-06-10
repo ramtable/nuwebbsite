@@ -1029,7 +1029,7 @@ repErr:
         o = ""
         If Left(URL, 1) = "/" Then URL = Mid(URL, 2)
         URL = "https://api.company-information.service.gov.uk/" & URL
-        Do Until o <> "" 'Or tries >= 500
+        Do Until o <> "" Or tries >= 500
             Do
                 On Error Resume Next
                 'conservatively treat any attempted connection as a deduction from quota

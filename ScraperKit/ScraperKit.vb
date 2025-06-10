@@ -301,7 +301,7 @@ Public Module ScraperKit
         'fetch a web page
         'if charset is specified, then take the responseBody in raw bytes and decode to the correct charset, otherwise use responseText
         'I needed to use the responseBody to get past reading problems with BIG5 files from the Law Society web site
-        Do Until tries >= 5 And limited
+        Do Until tries >= 3 And limited
             On Error Resume Next
             web = CType(WebRequest.Create(URL), HttpWebRequest)
             web.Timeout = 10000 'milliseconds
@@ -316,7 +316,7 @@ Public Module ScraperKit
             resp.Dispose()
             tries += 1
             Console.WriteLine("Attempt reading " & URL & " " & tries & " times. Error number " & Err.Number & ". " & Err.Description)
-            Call WaitNSec(5)
+            Call WaitNSec(10)
         Loop
         If Err.Number = 0 Then
             If charset = "" Then
