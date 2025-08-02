@@ -274,7 +274,7 @@ RepErr:
         'get contents of one daily quotation sheet from file, downloading it first if it doesn't exist
         Dim path As String
         path = GetLog("QuotesFolder") & fileName
-        If Not FileIO.FileSystem.FileExists(path) Then Call Download(root & fileName, path,,, False)
+        If Not FileIO.FileSystem.FileExists(path) Then Call Download(root & fileName, path, False)
         If FileIO.FileSystem.FileExists(path) Then Return My.Computer.FileSystem.ReadAllText(path) Else Return Nothing
     End Function
     Function GetGEMDQS(ByVal atDate As Date) As String
@@ -1479,6 +1479,9 @@ repErr:
         x = 0
         Do
             oneline = GetLine(resp)
+            If Trim(oneline) = "" Then
+                Continue Do ' Skip blank or whitespace-only lines
+            End If
             If oldFormat Then oneline = Right(oneline, Len(oneline) - 1)
             If Left(oneline, 3) = "---" Then Exit Do 'end of quotations list
             parallel = False
@@ -1580,10 +1583,14 @@ repErr:
         ErrMail("ParseShortNames failed", Err, oneline)
     End Sub
     Function GetLine(ByRef str As String) As String
-        Dim endline As Integer
-        endline = InStr(str, Chr(13))
-        GetLine = Left(str, endline - 1)
-        str = Right(str, Len(str) - endline - 1)
+        Dim endline As Integer = InStr(str, vbCrLf)
+        If endline > 0 Then
+            GetLine = Left(str, endline - 1)
+            str = Mid(str, endline + 2)
+        Else
+            GetLine = str
+            str = ""
+        End If
     End Function
     Function MoveLines(ByVal str As String, ByVal lines As Integer) As String
         For lines = 1 To lines
@@ -1598,7 +1605,7 @@ repErr:
         noCode = (atDate < #11/27/2006#) 'no stock codes before that
         If Not noCode Then
             oldFormat = False
-            endline = InStr(resp, "<a name = ""quotations"">") 'look for keywords 5 lines above start
+            endline = InStr(resp, "a name=""quotations"">QUOTATIONS</a>") 'look for keywords 5 lines above start
             resp = Right(resp, Len(resp) - endline) 'cut the top off
             endline = InStr(resp, "---")
             resp = Left(resp, endline + 100) 'cut the bottom off, to speed things up. Allow for a carriage return which we need.
@@ -1615,7 +1622,8 @@ repErr:
                 resp = Replace(resp, "</pre>", "")
             Else
                 'on 4-Apr-2011 a new form of garbage appeared:
-                resp = Replace(resp, "</font></pre><pre><font size='1'>", "")
+                resp = Replace(resp, "</pre>", "")
+                resp = Replace(resp, "</font>", "")
                 'and the HTML started using &amp; instead of &, shifting all the columns
                 resp = Replace(resp, "&amp;", "&")
                 'and sometimes (notably in front of Goldbond, 0172) a double return was inserted, so replace it with a single one
